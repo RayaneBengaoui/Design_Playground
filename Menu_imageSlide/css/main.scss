@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+img {
+  width: 100%;
+  visibility: hidden;
+  position: absolute;
+}
+
+.container {
+  display: flex;
+  margin: 5em 0 5em 5em;
+  position: relative;
+}
+
+section {
+  width: 800px;
+  position: absolute;
+  right: 10em;
+}
+
+nav {
+  margin-right: 4em;
+  position: fixed;
+  width: 800px;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  width: 10em;
+
+  li {
+    text-transform: uppercase;
+    padding: 0.8em 0 0.8em 0.8em;
+    cursor: pointer;
+
+    // To find the border radius : https://9elements.github.io/fancy-border-radius/
+    // border-radius: 76% 24% 41% 59% / 56% 80% 20% 44%;
+    position: relative;
+  }
+}
