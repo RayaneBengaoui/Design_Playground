@@ -8,6 +8,9 @@ img {
   width: 100%;
   visibility: hidden;
   position: absolute;
+  // To get clip path : https://bennettfeely.com/clippy/
+  clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  transition: clip-path 0.3s;
 }
 
 .container {
@@ -39,7 +42,30 @@ ul {
     cursor: pointer;
 
     // To find the border radius : https://9elements.github.io/fancy-border-radius/
-    // border-radius: 76% 24% 41% 59% / 56% 80% 20% 44%;
+    border-radius: 76% 24% 41% 59% / 56% 80% 20% 44%;
     position: relative;
+    transition: border-radius 1s;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 0;
+      border-bottom: 2px solid black;
+      top: 1.45em;
+      transition: width 1s;
+    }
+    &:hover {
+      border: 1px solid gray;
+      border-radius: 30% 70% 73% 27% / 30% 30% 70% 70%;
+
+      &:before {
+        width: 80%;
+      }
+    }
   }
+}
+
+.intro {
+  visibility: visible;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
